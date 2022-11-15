@@ -31,9 +31,9 @@ class Student:
 
     def __str__(self):
         return f"Имя: {self.name}\nФамилия: {self.surname}\n" \
-            f"Средняя оценка за домашние задания: {self.average_grade()}\n"\
-            f"Курсы в процессе изучения: {', '.join(self.courses_in_progress)}\n"\
-            f"Завершённые курсы: {', '.join(self.courses_complete)}\n"
+               f"Средняя оценка за домашние задания: {self.average_grade()}\n" \
+               f"Курсы в процессе изучения: {', '.join(self.courses_in_progress)}\n" \
+               f"Завершённые курсы: {', '.join(self.courses_complete)}\n"
 
     def __lt__(self, other):
         if not isinstance(other, Student):
@@ -75,7 +75,7 @@ class Lector(Mentor):
 
     def __str__(self):
         return f"Имя: {self.name}\nФамилия: {self.surname}\n" \
-            f"Средняя оценка за лекции: {self.average_grade()}\n"
+               f"Средняя оценка за лекции: {self.average_grade()}\n"
 
     def __lt__(self, other):
         if not isinstance(other, Lector):
@@ -111,8 +111,8 @@ class Reviewer(Mentor):
             return 'Error'
 
     def __str__(self):
-        return f"Имя: {self.name}\n"\
-            f"Фамилия: {self.surname}\n"
+        return f"Имя: {self.name}\n" \
+               f"Фамилия: {self.surname}\n"
 
 
 first_student = Student('Bobbi', 'Kotik', 26)
@@ -166,7 +166,6 @@ bad_reviewer.give_mark(third_student, 'Java', 6)
 bad_reviewer.give_mark(third_student, 'Java', 3)
 bad_reviewer.give_mark(third_student, 'C++', 7)
 
-
 first_student.rate_lector(good_teacher, 'Python', 10)
 first_student.rate_lector(good_teacher, 'Python', 10)
 first_student.rate_lector(good_teacher, 'Python', 10)
@@ -191,7 +190,6 @@ third_student.rate_lector(bad_teacher, 'Java', 1)
 third_student.rate_lector(bad_teacher, 'Java', 2)
 third_student.rate_lector(bad_teacher, 'Java', 5)
 
-
 first_student.average_grade()
 second_student.average_grade()
 third_student.average_grade()
@@ -207,7 +205,7 @@ print(good_reviewer)
 print(bad_reviewer)
 print('Сравнение средней оценки студентов:')
 print(f'Средняя оценка {first_student.name} {first_student.surname}'
-      f' {"<" if first_student.average_grade() <  second_student.average_grade() else ">" if first_student.average_grade() > second_student.average_grade() else "="}'
+      f' {"<" if first_student.average_grade() < second_student.average_grade() else ">" if first_student.average_grade() > second_student.average_grade() else "="}'
       f' чем у {second_student.name} {second_student.surname}')
 print(f'Средняя оценка {first_student.name} {first_student.surname}'
       f' {"<" if first_student.average_grade() < third_student.average_grade() else ">" if first_student.average_grade() > third_student.average_grade() else "="}'
@@ -254,3 +252,6 @@ def course_average_grade(lector, course):
 
 
 course_average_grade(lector_list, course_selection)
+
+# commit test comment
+
