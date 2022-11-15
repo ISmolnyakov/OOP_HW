@@ -7,7 +7,6 @@ class Student:
         self.courses_complete = []
         self.grades = {}
 
-
     def average_grade(self):
         grades_sum = 0
         marks_total = 0
@@ -63,7 +62,6 @@ class Mentor():
 class Lector(Mentor):
     def __init__(self, name, surname):
         super().__init__(name, surname)
-
 
     def average_grade(self):
         grades_sum = 0
@@ -236,6 +234,7 @@ def course_average_grade(students, course):
     avr_grade = course_grades_sum / course_grade_num
     return print(f'Средняя оценка за домашние задания по всем студентам курса {course} {round(avr_grade, 2)}')
 
+
 course_average_grade(student_list, course_selection)
 print()
 lector_list = [good_teacher, bad_teacher]
@@ -252,5 +251,6 @@ def course_average_grade(lector, course):
                 course_grade_num += 1
     avr_grade = course_grades_sum / course_grade_num
     return print(f'Средняя оценка  за лекции всех лекторов курса {course} {round(avr_grade, 2)}')
+
 
 course_average_grade(lector_list, course_selection)
