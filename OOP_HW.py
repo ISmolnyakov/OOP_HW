@@ -60,8 +60,6 @@ class Mentor():
 
 
 class Lector(Mentor):
-    def __init__(self, name, surname):
-        super().__init__(name, surname)
 
     def average_grade(self):
         grades_sum = 0
@@ -94,8 +92,6 @@ class Lector(Mentor):
 
 
 class Reviewer(Mentor):
-    def __init__(self, name, surname):
-        super().__init__(name, surname)
 
     def give_mark(self, student, course, grade):
         if grade in range(1, 11):
