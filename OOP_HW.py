@@ -248,6 +248,3 @@ def course_average_grade(lector, course):
 
 
 course_average_grade(lector_list, course_selection)
-
-# commit test comment
-
